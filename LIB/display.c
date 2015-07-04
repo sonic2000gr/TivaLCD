@@ -217,10 +217,10 @@ void initLCD(void)
 
 	setCmd();
 	SysCtlDelay(15000);
-	GPIOPinWrite(DATA_PORT_BASE, ALLDATAPINS, 0b0000);
+	GPIOPinWrite(DATA_PORT_BASE, ALLDATAPINS, 0b0010);
 	pulseLCD();
 	SysCtlDelay(15000);
-	GPIOPinWrite(DATA_PORT_BASE, ALLDATAPINS, 0b0000);
+	GPIOPinWrite(DATA_PORT_BASE, ALLDATAPINS, 0b0010);
 	pulseLCD();
 	sendByte(0x28,FALSE);  // Set two lines
 	cursorOffLCD();       // Cursor invisible
