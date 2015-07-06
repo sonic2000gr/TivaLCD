@@ -219,11 +219,9 @@ void initLCD(void)
 	SysCtlDelay(15000);
 	GPIOPinWrite(DATA_PORT_BASE, ALLDATAPINS, 0b0010);
 	pulseLCD();
-	SysCtlDelay(15000);
 	GPIOPinWrite(DATA_PORT_BASE, ALLDATAPINS, 0b0010);
 	pulseLCD();
 	sendByte(0x28,FALSE);  // Set two lines
-	sendByte(0x28,FALSE);
 	cursorOffLCD();       // Cursor invisible
 	sendByte(0x06, FALSE); // Set insert mode
 	clearLCD();
