@@ -97,8 +97,14 @@ void setCursorPositionLCD(char row, char col)
 
 	if (row == 0)
 		address = 0;
-	else
+	else if (row==1)
 		address = 0x40;
+	else if (row==2)
+		address = 0x14;
+	else if (row==3)
+		address = 0x54;
+	else
+		address = 0;
 
 	address |= col;
 
